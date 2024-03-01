@@ -1,0 +1,111 @@
+﻿<Page x:Class="MyShop.pages.CustomerManagement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyShop.pages" xmlns:myshop="clr-namespace:MyShop"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CustomerManagement" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <FontFamily x:Key="test" >/res/font/#SVN-Transformer</FontFamily>
+            <myshop:RelativeToAbsoluteConverter x:Key="PathConverter"/>
+            <ControlTemplate x:Key="NoMouseOverButtonTemplate"   
+                 TargetType="Button">
+                <Border Background="{TemplateBinding Background}"  
+          BorderBrush="{TemplateBinding BorderBrush}"  
+          BorderThickness="{TemplateBinding BorderThickness}">
+                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Border>
+
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsEnabled"  
+             Value="False">
+                        <Setter Property="Background"  
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                        <Setter Property="Foreground"  
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Border IsHitTestVisible="True" CornerRadius="10" Padding="6" Background="#3BBDA1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"  Grid.Column="0" CornerRadius="10 0 0 0" Background="#416665">
+                <TextBlock Width="200" Height="50" Text="" FontSize="30" TextAlignment="Center" Foreground="white" HorizontalAlignment="Center" Style="{StaticResource TitleText}" VerticalAlignment="Top"/>
+            </Border>
+            <Border Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="1" CornerRadius="0 10 0 0" Background="#416665">
+                <TextBlock Width="200" Height="50" Text="Customer Information" FontSize="30"  TextAlignment="Center" Foreground="white" HorizontalAlignment="Center" Style="{StaticResource TitleText}" VerticalAlignment="Top"/>
+            </Border>
+
+            <Border Grid.Row="1" Grid.RowSpan="2" Padding="0 10 10 0" Grid.Column="0" CornerRadius="0 0 0 10" Background="WhiteSmoke">
+                <StackPanel Orientation="Vertical">
+                    <Border CornerRadius="0 10 10 0" Background="#416665">
+                        <Button Name="AddBtn" MouseLeave="AddBtn_MouseLeave" MouseEnter="AddBtn_MouseEnter"  Height="50" BorderThickness="0" Click="AddBtn_Click" Template="{StaticResource NoMouseOverButtonTemplate}" Background="Transparent">
+                            <TextBlock Foreground="White" FontWeight="Bold">Add</TextBlock>
+                        </Button>
+                    </Border>
+
+                    <Border Height="10"></Border>
+
+                    <Border  CornerRadius="0 10 10 0" Background="#416665">
+                        <Button Name="EditBtn" Click="EditBtn_Click" MouseEnter="EditBtn_MouseEnter" MouseLeave="EditBtn_MouseLeave" Height="50" BorderThickness="0" Template="{StaticResource NoMouseOverButtonTemplate}" Background="Transparent">
+                            <TextBlock Foreground="White" FontWeight="Bold" FontSize="15">Edit</TextBlock>
+                        </Button>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+
+            <Border Grid.Column="1" Grid.Row="1" CornerRadius="0 0 10 0" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="WhiteSmoke">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBox Padding="0" FontSize="15" x:Name="TxtSearch" Background="#DDDDDD" Height="30" Width="300" Margin="0,10,0,10"></TextBox>
+                        <Button x:Name="SearchBtn" Click="SearchBtn_Click" Width="70" Height="30" Template="{StaticResource NoMouseOverButtonTemplate}" >
+                            <TextBlock> Search</TextBlock>
+                        </Button>
+                    </StackPanel>
+                    <ListView SelectionChanged="CustomerList_SelectionChanged" Width="600" Height="290" x:Name="CustomerList">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Width="600" Height="30">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition x:Name="Id" Width="30"/>
+                                        <ColumnDefinition x:Name="Name" Width="100"/>
+                                        <ColumnDefinition x:Name="Gender" Width="50"/>
+                                        <ColumnDefinition x:Name="Phonenum" Width="100"/>
+                                        <ColumnDefinition x:Name="Email" Width="150"/>
+                                        <ColumnDefinition x:Name="Address" Width="150"/>
+                                        <ColumnDefinition x:Name="TotalSpending" Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock TextAlignment="Center" Text="{Binding ID}" Grid.Column="0"/>
+                                    <TextBlock Text="{Binding NAME}" Grid.Column="1"/>
+                                    <TextBlock TextAlignment="Center" Text="{Binding GENDER}" Grid.Column="2"/>
+                                    <TextBlock TextAlignment="Center" Text="{Binding PHONENUM}" Grid.Column="3"/>
+                                    <TextBlock TextAlignment="Center" Text="{Binding EMAIL}" Grid.Column="4"/>
+                                    <TextBlock TextAlignment="Center" Text="{Binding ADDRESS}" Grid.Column="5"/>
+                                    <TextBlock TextAlignment="Center" Text="{Binding TOTALSPENDING}" Grid.ColumnSpan="6"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Page>

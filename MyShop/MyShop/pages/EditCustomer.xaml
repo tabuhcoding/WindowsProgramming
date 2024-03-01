@@ -1,0 +1,81 @@
+﻿<Window x:Class="MyShop.pages.EditCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyShop.pages"
+        mc:Ignorable="d"
+        Title="EditCustomer" Height="480" Width="300" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+    <Border Background="#3BBDA1" CornerRadius="10">
+        <StackPanel Orientation="Vertical">
+            <Border Background="CadetBlue" CornerRadius="10 10 0 0">
+                <TextBlock TextAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="WhiteSmoke"> EDIT CUSTOMER</TextBlock>
+            </Border>
+            <Border Height="30"></Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border Width="20"></Border>
+                <Label FontWeight="Bold" Foreground="#111165" FontSize="20" VerticalAlignment="Center">Name:</Label>
+                <Border Width="20"></Border>
+                <TextBox x:Name="TxtName" Padding="0" Background="#DDDDFF" Width="150" Height="30">
+                </TextBox>
+                <Border Width="20"></Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border Width="20"></Border>
+                <Label FontWeight="Bold" Foreground="#111165" FontSize="20" VerticalAlignment="Center">Phone:</Label>
+                <Border Width="20"></Border>
+                <TextBox x:Name="TxtPhone" Padding="0" Background="#DDDDFF" Width="150" Height="30">
+                </TextBox>
+                <Border Width="20"></Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border Width="20"></Border>
+                <Label FontWeight="Bold" Foreground="#111165" FontSize="20" VerticalAlignment="Center">Email:</Label>
+                <Border Width="30"></Border>
+                <TextBox x:Name="TxtEmail" Padding="0" Background="#DDDDFF" Width="150" Height="30">
+                </TextBox>
+                <Border Width="20"></Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border Width="20"></Border>
+                <Label FontWeight="Bold" Foreground="#111165" FontSize="20" VerticalAlignment="Center">Gender:</Label>
+                <Border Width="15"></Border>
+                <ComboBox x:Name="TxtGender" Background="#FFDDFF" Width="150" Height="30">
+                    <ComboBoxItem>
+                        <TextBlock>Nam</TextBlock>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <TextBlock>Nữ</TextBlock>
+                    </ComboBoxItem>
+                </ComboBox>
+                <Border Width="20"></Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Border Width="20"></Border>
+                <Label FontWeight="Bold" Foreground="#111165" FontSize="20" VerticalAlignment="Center">Address:</Label>
+                <Border Width="20"></Border>
+                <Border Width="170"></Border>
+
+            </StackPanel>
+            <TextBox x:Name="TxtAddress" Padding="0" Width="250" Height="100" TextWrapping="Wrap" Background="#DDDDFF">
+            </TextBox>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="EditBtn" Click="EditBtn_Click" Width="60" Background="#416665" Foreground="White" FontWeight="Bold">
+                    Edit
+                </Button>
+                <Border Width="50">
+
+                </Border>
+                <Button x:Name="CancelBtn" Click="CancelBtn_Click"  Width="60" Height="30" Background="#416665"  Foreground="White" FontWeight="Bold">
+                    Cancel
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+    </Border>
+</Window>

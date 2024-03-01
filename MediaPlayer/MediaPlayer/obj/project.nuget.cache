@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "bMjOgXCce4ZWmr69lS1q3+TjJmAZhvP+4i74IBY8pu2w0XVak3Km73/9p0wJUkX5/LYGVVi6RpueT88K+Bsxvw==",
+  "success": true,
+  "projectFilePath": "D:\\TRUONG TAN DAT\\DAI HOC DUNG HOC DAI\\Senior_3\\Windows Programming\\Git\\MediaPlayer-HCMUS\\MediaPlayer\\MediaPlayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\fody\\6.8.0\\fody.6.8.0.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\mousekeyhook\\5.7.1\\mousekeyhook.5.7.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

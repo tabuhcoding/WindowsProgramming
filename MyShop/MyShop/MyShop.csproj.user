@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\BaohocDH\CSN\WinDow\forMyShop\TestLayer\MyShop\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="controls\MyOption.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="controls\MyTextBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\AddWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\CustomerManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\EditCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\EditWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\InputDatabase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\InputServer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\NewCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\ProductStatistic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\SignIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\SignUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\TopSellersWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="controls\MyOption.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="controls\MyTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\AddWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\CustomerManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\EditCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\EditWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\InputDatabase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\InputServer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\NewCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\ProductStatistic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\SignIn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\SignUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pages\TopSellersWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

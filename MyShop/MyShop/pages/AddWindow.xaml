@@ -1,0 +1,39 @@
+﻿<Window x:Class="MyShop.pages.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyShop.pages"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="700" Width="800" Unloaded="Window_Unloaded">
+    <Canvas Height="700" VerticalAlignment="Top" HorizontalAlignment="Center" Width="450">
+        <TextBlock Text="New Phone" FontSize="30" FontWeight="Bold" Canvas.Left="149" Canvas.Top="19"/>
+        <TextBlock  Text="Name: " Height="24" Width="48" Canvas.Left="11" Canvas.Top="73" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="NamePhone"   Height="40" Width="273" Canvas.Left="135" Canvas.Top="65" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock  Text="Operating System: " Height="24" Width="107" Canvas.Left="11" Canvas.Top="128" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Name="OSPhone" Height="40" Width="273" Canvas.Left="135" Canvas.Top="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <TextBlock  Text="Manufacturer: " Height="24" Width="80" Canvas.Left="11" Canvas.Top="186" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="ManufacturerPhone"  Height="40" Width="273" Canvas.Left="135" Canvas.Top="178" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <TextBlock  Text="Memory Storage: " Height="24" Width="100" Canvas.Left="11" Canvas.Top="237" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <TextBox Name="MemoryPhone" TextWrapping="Wrap"  Height="40" Width="273" Canvas.Left="135" Canvas.Top="229" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock  Text="Price: " Height="24" Width="48" Canvas.Left="11" Canvas.Top="311" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1.005,-0.078"/>
+        <TextBox Name="PricePhone" TextWrapping="Wrap"  Height="40" Width="273" Canvas.Left="135" Canvas.Top="293" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <TextBlock  Text="Price Original: " Height="24" Width="110" Canvas.Left="8" Canvas.Top="366" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1.005,-0.078"/>
+        <TextBox Name="PriceOriginalPhone" TextWrapping="Wrap"  Height="40" Width="273" Canvas.Left="139" Canvas.Top="348" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock  Text="Quantity: " Height="24" Width="48" Canvas.Left="13" Canvas.Top="414" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.005,-0.078"/>
+        <TextBox Name="QuantityPhone" TextWrapping="Wrap"  Height="40" Width="273" Canvas.Left="139" Canvas.Top="397" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <TextBlock  Text="Image: " Height="24" Width="48" Canvas.Left="11" Canvas.Top="481" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.005,-0.078"/>
+        <TextBox Name="ImagePhone" TextWrapping="Wrap" Height="40" Width="273" Canvas.Left="135" Canvas.Top="473" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock  Text="Details: " Height="24" Width="48" Canvas.Left="11" Canvas.Top="548" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="1.005,-0.078"/>
+        <TextBox Name="DetailsPhone" TextWrapping="Wrap" Height="40" Width="273" Canvas.Left="135" Canvas.Top="532" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <Button Content="New" Width="70" Height="50" Canvas.Left="104" Canvas.Top="611" HorizontalAlignment="Left" VerticalAlignment="Top" Click="newButton_Click"/>
+        <Button Content="Cancel" IsCancel="True" Width="70" Height="50" Canvas.Left="289" Canvas.Top="611" HorizontalAlignment="Left" VerticalAlignment="Top" Click="cancelButton_Click"/>
+
+    </Canvas>
+</Window>

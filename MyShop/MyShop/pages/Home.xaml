@@ -1,0 +1,134 @@
+﻿<Page x:Class="MyShop.pages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:local="clr-namespace:MyShop.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Home">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <FontFamily x:Key="test" >/res/font/#SVN-Transformer</FontFamily>
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+    <Border Background="WhiteSmoke">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" VerticalAlignment="Top">
+                <TextBlock FontFamily="{StaticResource test}"><Run Text="Hi..."/></TextBlock>
+                <TextBlock FontFamily="{StaticResource test}" FontSize="35"><Run Text="Welcome back  -- HOME"/></TextBlock>
+            </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Border BorderBrush="Black" 
+                        BorderThickness="1" 
+                        Background="White"
+                        CornerRadius="15">
+                    <StackPanel Margin="10" Orientation="Vertical">
+                        <TextBlock 
+                            Text="Tổng số sản phẩm"
+                            FontSize="25"
+                            FontStyle="Normal"
+                            HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock
+                            d:Text="100" 
+                            FontSize="40"
+                            Name="txtTotalPhone"
+                            FontWeight="Heavy"
+                            Foreground="Violet"
+                            HorizontalAlignment="Center">
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+
+                <Border Grid.Column="0"
+                        Grid.Row="1" BorderBrush="Black" 
+                        BorderThickness="1" 
+                        Background="White"
+                        CornerRadius="15">
+                    <StackPanel Margin="10" Orientation="Vertical">
+                        <TextBlock 
+                            Text="Tổng số nhãn hiệu"
+                            FontSize="25"
+                            FontStyle="Normal"
+                            HorizontalAlignment="Center"></TextBlock>
+                        <TextBlock
+                            d:Text="100" 
+                            FontSize="40"
+                            Name="txtTotalBrand"
+                            FontWeight="Heavy"
+                            Foreground="Violet"
+                            HorizontalAlignment="Center">
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+                <Grid Grid.Column="1" Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Margin="2" HorizontalAlignment="Center" Text="Số đơn hàng mới trong năm"/>
+                    <Border Grid.Row="1" Background="White"
+                        Margin="10"
+ 
+                        CornerRadius="15">
+                        <lvc:CartesianChart Name="chartWeek" LegendLocation="Bottom" Margin="10"/>
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Margin="2" HorizontalAlignment="Center" Text="Số đơn hàng mới trong tháng"/>
+                    <Border Background="White"
+                        Margin="10"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        CornerRadius="15">
+                        <lvc:CartesianChart Name="chartMonth" LegendLocation="Bottom" Margin="10"/>
+                    </Border>
+                </Grid>
+
+            </Grid>
+            <TextBlock Grid.Row="2"
+                       Text="Top 5 sản phẩm sắp hết hàng"
+                       FontSize="20"
+                       FontWeight="DemiBold"
+                       Foreground="BlueViolet"
+                       Background="AliceBlue"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            <DataGrid Grid.Row="3" x:Name="topSellersGrid" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Phone Name" Binding="{Binding PhoneName}" Width="*" />
+                    <DataGridTextColumn Header="Quantity" Binding="{Binding TotalAmount}" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Border>
+
+
+</Page>
